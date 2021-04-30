@@ -1,0 +1,21 @@
+{
+	"user1": {
+		"name": "John",
+		"age": 30,
+		"cars": {
+			"car1": "Ford",
+			"car2": "Mercedes",
+			"car3": "Fiat"
+		},
+        "location": ["Mumbai", "Delhi"] 
+	},
+	"user2": {
+		"name": "Akash",
+		"age": 23,
+		"cars": {
+			"car1": "BMW"
+		},
+        "location": ["Mumbai","Chennai"] 
+	}
+
+}
