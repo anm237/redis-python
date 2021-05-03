@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-client
+  labels:
+    app: redis-client
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: redis-client
+  template:
+    metadata:
+      labels:
+        app: redis-client
+    spec:
+      containers:
+        - name: redis-client
+          image: redis-client:latest
+          imagePullPolicy: Never
+          command: [ "/bin/bash", "-c", "--" ]
+          args: [ "while true; do sleep 30; done;" ]
+          ports:
+          - containerPort: 80
