@@ -51,7 +51,7 @@ def delete_from_redis(delete_key):
   Args:
       delete_key (string): Key to be deleled from the redis hash
   """
-  r.delete('sample1', delete_key)
+  r.hdel('sample1', delete_key)
   print(r.hmget('sample1', delete_key))
 
 def delete_hash_from_redis(delete_hash):
