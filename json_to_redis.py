@@ -37,7 +37,7 @@ def read_from_redis_json():
 
 def update_json_to_redis():
     """
-    Update operation using python dictionary. Dictionary is converted back to JSON strong.
+    Update operation using python dictionary. Dictionary is converted back to JSON string.
     """
     reply = json.loads((r.execute_command('JSON.GET', 'doc')).decode('utf-8'))
     reply['user1']['cars']['car2']='Honda'
